@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            background-color: rgb(224, 158, 158);
+        }
+        header{
+            width: 100%;
+            display: flex;
+            height: 100px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav li{
+            display: inline;
+            padding: 15px;
+            background-color: rgb(217, 217, 217);
+        }
+        #battery{
+            font-weight: bold;
+            padding-right: 45px;
+        }
+        main{
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+        main div{
+            display: inline;
+        }
+        .time{
+            font-size: xx-large;
+        }
+        .date{
+            font-size: xx-large;
+            padding: 20px;
+        }
+        footer input{
+            background-color: rgb(217, 217, 217);
+            height: 45px;
+            width: 120px;
+        }
+        #submit{
+            background-color: rgb(207, 107, 107);
+            color: white;
+        }
+        html, body{
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="list">
+            </ul>
+        </nav>
+        <div id="battery">
+        </div>
+    </header>
+    <main>
+        <div id="date" class="date">
+            <h1>2023-12-07</h1>
+        </div>
+        <div id="time" class="time">
+            <h1>00:00:00</h1>
+        </div>
+    </main>
+    <footer>
+        <form id="form">
+            <input id="hour" type="number" min="0" max="23">
+            <input id="min" type="number" min="0" max="59">
+            <input id="sec" type="number" min="0" max="59">
+            <input id="submit" type="submit" value="추가">
+        </form>
+    </footer>
+    <script src="alarm.js"></script>
+</body>
